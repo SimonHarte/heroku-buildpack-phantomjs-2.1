@@ -7,9 +7,11 @@ CACHE_DIR=$2
 
 # config
 VERSION="2.1.1"
+FILE_NAME=${VERSION}.zip
+ARCHIVE_NAME=phantomjs-${VERSION}
 
 # Buildpack URL
-BUILDPACK_PHANTOMJS_PACKAGE=https://github.com/ariya/phantomjs/archive/${VERSION}.zip
+BUILDPACK_PHANTOMJS_PACKAGE=https://github.com/ariya/phantomjs/archive/${FILE_NAME}
 
 mkdir -p $CACHE_DIR
 if ! [ -e $CACHE_DIR/$FILE_NAME ]; then
