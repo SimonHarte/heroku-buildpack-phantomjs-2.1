@@ -6,13 +6,10 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 # config
-VERSION="2.0.0-20150528"
+VERSION="2.1.1"
 
 # Buildpack URL
-# example: # https://github.com/bprodoehl/phantomjs/releases/download/v2.0.0-20150528/phantomjs-2.0.0-20150528-u1404-x86_64.zip
-ARCHIVE_NAME=phantomjs-${VERSION}
-FILE_NAME=${ARCHIVE_NAME}-u1404-x86_64.zip
-BUILDPACK_PHANTOMJS_PACKAGE=https://github.com/bprodoehl/phantomjs/releases/download/v${VERSION}/${FILE_NAME}
+BUILDPACK_PHANTOMJS_PACKAGE=https://github.com/ariya/phantomjs/archive/${VERSION}.zip
 
 mkdir -p $CACHE_DIR
 if ! [ -e $CACHE_DIR/$FILE_NAME ]; then
